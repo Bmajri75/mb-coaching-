@@ -139,18 +139,20 @@ function StripeCheckout({ formData, onSuccess, onBack }) {
           </div>
         )}
 
-        {/* Info test */}
-        <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mb-6">
-          <p className="text-accent text-sm mb-2">
-            <strong>🧪 Mode Test :</strong> Utilisez ces cartes de test
-          </p>
-          <p className="text-gray-300 text-xs">
-            • Succès : 4242 4242 4242 4242
-            <br />
-            • Date : n'importe quelle date future
-            <br />• CVC : n'importe quel 3 chiffres
-          </p>
-        </div>
+        {/* Info test - Affiché uniquement en mode test */}
+        {import.meta.env.VITE_STRIPE_PUBLIC_KEY?.startsWith("pk_test_") && (
+          <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mb-6">
+            <p className="text-accent text-sm mb-2">
+              <strong>🧪 Mode Test :</strong> Utilisez ces cartes de test
+            </p>
+            <p className="text-gray-300 text-xs">
+              • Succès : 4242 4242 4242 4242
+              <br />
+              • Date : n'importe quelle date future
+              <br />• CVC : n'importe quel 3 chiffres
+            </p>
+          </div>
+        )}
 
         {/* Boutons */}
         <div className="flex gap-4">
