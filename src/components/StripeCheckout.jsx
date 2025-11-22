@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { envoyerEmailConfirmation } from "../utils/emailjs";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { sauvegarderReservation } from "../utils/firebase";
 
 function StripeCheckout({ formData, onSuccess, onBack }) {
   const stripe = useStripe();
@@ -45,6 +46,13 @@ function StripeCheckout({ formData, onSuccess, onBack }) {
 
       // Paiement réussi !
       console.log("Paiement réussi !", paymentMethod);
+
+      // Sauvegarde dans Firebase
+      await sauvegarderReservation({
+        ...formData,
+        paymentId: paymentMethod.id,
+        amount: 70,
+      });
 
       // Envoie l'email de confirmation
       await envoyerEmailConfirmation(formData);
