@@ -1,15 +1,14 @@
 // src/utils/emailjs.js
 import emailjs from "@emailjs/browser";
 
-// ⚠️ REMPLACE CES VALEURS PAR LES TIENNES
-const EMAILJS_PUBLIC_KEY = "sBL6TTB1cM1NUU0Ni"; // De Account > General
-const EMAILJS_SERVICE_ID = "service_rpvt59c"; // De Email Services
-const EMAILJS_TEMPLATE_ID = "template_x39lhvt"; // De Email Templates
+// Utilise les variables d'environnement
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
 // Initialise EmailJS
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
-// Fonction pour envoyer l'email de confirmation
 export const envoyerEmailConfirmation = async (reservationData) => {
   try {
     const templateParams = {
