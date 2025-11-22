@@ -154,6 +154,16 @@ function StripeCheckout({ formData, onSuccess, onBack }) {
           </div>
         )}
 
+        {/* Info production - Affiché uniquement en mode live */}
+        {import.meta.env.VITE_STRIPE_PUBLIC_KEY?.startsWith("pk_live_") && (
+          <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 mb-6">
+            <p className="text-green-400 text-sm">
+              <strong>🔒 Paiement sécurisé</strong> - Vos données bancaires sont
+              protégées par Stripe
+            </p>
+          </div>
+        )}
+
         {/* Boutons */}
         <div className="flex gap-4">
           <button
