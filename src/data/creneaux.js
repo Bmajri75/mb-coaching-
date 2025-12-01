@@ -1,13 +1,13 @@
 // src/data/creneaux.js
 
 export const creneaux = {
-  lundi: ["09:00", "10:30", "14:00", "16:00", "18:00"],
-  mardi: ["09:00", "10:30", "14:00", "16:00", "18:00"],
-  mercredi: ["09:00", "10:30", "14:00", "16:00", "18:00"],
-  jeudi: ["09:00", "10:30", "14:00", "16:00", "18:00"],
-  vendredi: ["09:00", "10:30", "14:00", "16:00"],
-  samedi: ["09:00", "10:30", "12:00", "14:00"],
-  dimanche: ["09:00", "10:30", "12:00", "14:00"],
+  lundi: ["08:00", "09:00", "11:00"],
+  mardi: ["08:00", "09:00", "11:00"],
+  mercredi: ["08:00", "09:00", "11:00"],
+  jeudi: ["08:00", "09:00", "11:00"],
+  vendredi: ["08:00", "09:00", "11:00"],
+  samedi: ["08:00", "09:00", "11:00"],
+  dimanche: ["08:00", "09:00", "11:00"],
 };
 
 export const disciplines = [
@@ -25,7 +25,7 @@ export const disciplines = [
     titre: "Boxe Thaïlandaise",
     description:
       "L'art des 8 membres. Travaillez vos coups de poing, coups de pied, genoux et coudes. Cardio intense garanti.",
-    emoji: "🥋",
+    emoji: "🇹🇭",
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ export const tarif = {
     "Disponible 7j/7 pour toutes questions",
   ],
   lieu: "15 bd Gouvion-Saint-Cyr, 75017 Paris",
-  metro: "Porte Maillot (Ligne 1)",
+  metro: "Porte Maillot (Ligne 1), Porte de Champerret (Ligne 3) T3b",
 };
 
 export const coach = {

@@ -93,9 +93,11 @@ function Tarif() {
           </div>
           <div className="bg-secondary/30 border border-primary/20 rounded-xl p-6 text-center">
             <div className="text-4xl mb-3">🎯</div>
-            <h4 className="text-white font-bold mb-2">Premier cours gratuit</h4>
+            <h4 className="text-white font-bold mb-2">
+              Reservez votre premier cours
+            </h4>
             <p className="text-gray-400 text-sm">
-              Essai de 30 min offert pour découvrir
+              3 minutes pour remplir le formulaire
             </p>
           </div>
         </div>

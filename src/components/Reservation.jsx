@@ -25,13 +25,13 @@ function Reservation() {
     if (!formData.date) return [];
     const date = new Date(formData.date);
     const joursSemaine = [
-      "dimanche",
       "lundi",
       "mardi",
       "mercredi",
       "jeudi",
       "vendredi",
       "samedi",
+      "dimanche",
     ];
     const jour = joursSemaine[date.getDay()];
     return creneaux[jour] || [];
