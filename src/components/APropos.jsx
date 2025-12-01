@@ -15,7 +15,12 @@ function APropos() {
               <div className="aspect-square bg-gradient-to-br from-primary/30 to-accent/20 rounded-2xl flex items-center justify-center border-2 border-primary/30">
                 <div className="text-center">
                   <div className="text-8xl mb-4">🥊</div>
-                  <p className="text-gray-400 text-sm">Photo à venir</p>
+                  <p className="text-gray-400 text-sm">
+                    <img
+                      src="../../photo/Screenshot_20250123-181319.png"
+                      alt=""
+                    />
+                  </p>
                 </div>
               </div>
               {/* Badge flottant */}
